@@ -60,7 +60,7 @@ public class CardArrayAdapter  extends ArrayAdapter<Card> {
         row.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), card.getLine1(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(view.getContext(), card.getLine1(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(view.getContext(),Content.class);
                 String strName=card.getLine1();
                 intent.putExtra("names",strName);
