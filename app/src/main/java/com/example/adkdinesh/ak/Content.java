@@ -32,13 +32,14 @@ public class Content extends AppCompatActivity {
 
     private ProgressDialog pd;
 
-    TextView tview;
+    TextView tview,ln1_tv,ln2,ln3,ln4,ln5,ln6,ln7,ln8,ln9,ln10,desc;
 
     ImageView imageView;
 
     List<String> content_list;
 
-    private static String S_URL= "http://10.42.0.1/AK/php/content_retrieve.php";
+//    private static String S_URL= "http://10.42.0.1/AK/php/content_retrieve.php";
+    private static String S_URL= "https://birthday-applications.000webhostapp.com/php/content_retrieve.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,9 +101,34 @@ public class Content extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(Content.this, content_list.get(10), Toast.LENGTH_SHORT).show();
+                                    //object for textviews
+                                    ln1_tv=findViewById(R.id.line1_tv);
+                                    ln2=findViewById(R.id.line2_tv);
+                                    ln3=findViewById(R.id.line3_tv);
+                                    ln4=findViewById(R.id.line4_tv);
+                                    ln5=findViewById(R.id.line5_tv);
+                                    ln6=findViewById(R.id.line6_tv);
+                                    ln7=findViewById(R.id.line7_tv);
+                                    ln8=findViewById(R.id.line8_tv);
+                                    ln9=findViewById(R.id.line9_tv);
+                                    ln10=findViewById(R.id.line10_tv);
+                                    desc=findViewById(R.id.desc_tv);
+
+                                    //Set Texts
+                                    ln1_tv.setText(content_list.get(0));
+                                    ln2.setText(content_list.get(1));
+                                    ln3.setText(content_list.get(2));
+                                    ln4.setText(content_list.get(3));
+                                    ln5.setText(content_list.get(4));
+                                    ln6.setText(content_list.get(5));
+                                    ln7.setText(content_list.get(6));
+                                    ln8.setText(content_list.get(7));
+                                    ln9.setText(content_list.get(8));
+                                    ln10.setText(content_list.get(9));
+                                    desc.setText(content_list.get(10));
+
                                     imageView=findViewById(R.id.imageView);
-                                    Picasso.get().load("http://10.42.0.1/AK/images/"+content_list.get(11)).resize(100,100).into(imageView);
+                                    Picasso.get().load("http://10.42.0.1/AK/images/"+content_list.get(11)).resize(350,350).into(imageView);
                                 }
                             });
                         } catch (JSONException e) {

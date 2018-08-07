@@ -26,8 +26,8 @@ public class CardListActivity extends Activity {
     private ListView listView;
     List<String> productList;
 
-    private static final String URL_PRODUCTS = "http://10.42.0.1/AK/php/retrieve.php";
-//private static final String URL_PRODUCTS = "https://birthday-applications.000webhostapp.com/php/retrieve.php";
+//    private static final String URL_PRODUCTS = "http://10.42.0.1/AK/php/list_retrieve.php";
+private static final String URL_PRODUCTS = "https://birthday-applications.000webhostapp.com/php/list_retrieve.php";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
